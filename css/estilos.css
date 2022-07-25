@@ -1,0 +1,460 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Mulish', sans-serif;
+    
+}
+/**********************Productos-Leer*********************/
+#prodleer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 60px 0;
+}
+#prodleer :first-child {
+    max-width: 700px;
+   
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+/*************************Nav Bar **********************/
+#logo1 {
+    width: 150px;
+    height: 31px;
+    background: url("../imgs/ZELUX.png");
+    font-size: 0;
+    position: fixed;            
+    top: 8px;
+    left: 50px;
+    z-index: 1031;
+}
+/*******************************************************/
+/****************************Footer*********************/
+footer {
+	background-color: #f8f9fa;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	padding-top: 10px;
+    padding-bottom: 5px;
+    height: 20vh;
+
+    
+}
+footer li{
+   display: inline;
+   text-align: center;
+    margin-right: 40px;
+    margin-bottom: 0 !important;
+}
+/*******************************************************/
+/********************BARRA SUPERIOR*********************/
+#logo {
+    width: 106px;
+    height: 48px;
+    background: url("../imgs/ZELUX.png");
+    font-size: 0;
+    
+    /* Corregimos el posicionamiento y el z-index ya que ahora la barra queda fija. */
+    
+    position: fixed;            
+    top: 6px;
+    left: 20px;
+    z-index: 1031;
+}
+nav.navbar {
+    background-color: #343034 !important;
+}
+/*******************************************************/
+
+body {
+    padding-top: 35px;
+    
+   
+}
+
+
+
+/*----------------------COLGANTES-----------*/
+
+.botoncomprar {
+    background-color: #F1C96D;
+    text-decoration: none;
+    border-radius: 3px;
+    color: black;
+    padding: 0.5rem;
+}
+.botoneliminar {
+    background-color: #a71d2a;
+    text-decoration: none;
+    border-radius: 3px;
+    color: white !important;
+    padding: 0.5rem;
+}
+.botoncomprar4 {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    background-color: #F1C96D;
+    text-decoration: none;
+    border-radius: 3px;
+    color: black;
+    padding: 0.5rem;
+    border: none;
+    outline:none;
+
+}
+
+.botoncomprar1 {
+    background-color: #F1C96D;
+    text-decoration: none;
+    border-radius: 3px;
+    color: black;
+    padding: 0.5rem;
+    height: 100%;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+
+}
+.botoncomprar2 {
+    background-color: #F1C96D;
+    text-decoration: none;
+    border-radius: 3px;
+    color: black;
+    padding: 0.5rem;
+  
+    margin: 10em 0;
+    
+
+}
+.botoncomprar5 {
+    background-color: #F1C96D;
+    text-decoration: none;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    padding: 0.5rem;
+
+    margin: 2em 0;
+
+
+}
+textarea {
+    margin-bottom: 1em;
+}
+input {
+    margin-bottom: 1em;
+}
+.boton2 {
+    text-decoration: none;
+    border: solid grey;
+    border-radius: 3px;
+    color: black;
+    padding: 0.5rem !important;
+
+}
+.botonz {
+    border: solid gray 0.1px;
+    border-radius: 3px;
+    padding: 1rem;
+}
+.botony {
+    border: solid gray 0.1px;
+    border-radius: 3px;
+    padding:1rem;
+    margin: 0 0 1rem 0;
+}
+.int {
+    padding:0;
+    margin:0;
+    
+}
+.padding {
+    padding: 0;
+    box-sizing: border-box;
+}
+.padding {
+    padding: 0;
+    box-sizing: border-box;
+    margin-bottom: 1em;
+}
+
+.nop {
+    padding: 0;
+    margin: 0;
+    
+}
+.titulo1 {
+    font-size: 1.5rem;
+}
+del,p {display:inline}
+del {color: grey;
+    padding: 0.5rem;
+}
+.img1 {
+    border-radius: 3px 0 0 3px;
+    
+}
+/*--------------------------COMPRA1--------------------------------*/
+#prod1{
+    margin: 0rem 1rem 0rem 1rem;
+    font-size: 24px;
+   
+}
+.botony a{
+font-weight: bold;
+}
+    
+/*---------------------------1ERA SECCION---------------------------*/
+
+#divbanner1 h2 {
+    background-image: url(../imgs/banner1.png);
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(../imgs/banner1.png) ;
+    background-repeat: no-repeat; background-position: center center;
+    height: 35vh;
+    text-align: center;
+    color: white;
+    box-sizing: border-box;
+    padding-top: 20vh;
+    border-radius: 10px;
+
+      
+}
+#divbanner1 {
+    box-sizing: border-box;
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+    margin-top: 2.6rem;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+
+   
+}
+
+#banner2 p, #banner3 p, #banner4 p, #banner5 p {
+    margin-top: 6rem;
+    font-size: 20px;
+    
+}
+
+.contb {
+    padding: 1rem;
+    box-sizing: border-box;
+}
+.colorb {
+    color: black !important;
+    text-decoration: none;
+}
+
+.padingprod {
+ padding: 0 1rem 0 1rem;
+}
+.padingprod1 {
+    padding: 1rem 0;
+}
+
+
+
+
+#banner2 {
+    background-image: url(../imgs/banner2.png);
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(../imgs/banner2.png) ;
+
+    background-repeat: no-repeat; background-position: center center;
+    width: 100%;
+    height: 25vh;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 0;
+}
+#banner3 {
+    background-image: url(../imgs/banner3.png);
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(../imgs/banner3.png) ;
+
+    background-repeat: no-repeat; background-position: center center;
+    width: 100%;
+    height: 25vh;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 0;
+}
+#banner4 {
+    background-image: url(../imgs/banner4.png);
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(../imgs/banner4.png) ;
+
+    background-repeat: no-repeat; background-position: center center;
+    width: 100%;
+    height: 25vh;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 0;
+}
+#banner5 {
+    
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(../imgs/banner5.png) ;
+
+    background-repeat: no-repeat; background-position: center center;
+    width: 100%;
+    height: 25vh;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 0;
+}
+#prod {
+    padding: 1em 0 1em 0;
+}
+
+#divbanner1 {
+    box-sizing: border-box;
+    padding: 0;
+    margin-bottom: 2rem;
+}
+#ahora12 {
+    text-align: center;
+    justify-content: center;
+    margin-top: 2rem;
+    background-color: #F1C96D;
+    border-radius: 10px;
+    color: black;
+    display: flex;
+    padding: 1em;
+}
+#ahora12 p {
+    flex: 1;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    color: black !important;
+}
+#dos {
+    margin-bottom: 90px;
+}
+#uno p, #uno a {
+    text-decoration: none !important;
+    color: white ;
+}
+.space {
+    padding: 2%;
+}
+/*--------------------------COMPRA1-----------------------------------*/
+#compra {
+
+    padding: 0 0 1em 0;
+    margin: 0;
+    
+}
+#imgp {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+}
+#botonback {
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+#botonback2 {
+    height: 30px;
+    width: 30px;
+
+}
+#product1 {
+    border: solid grey 0.1px;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    border-radius: 3px;
+    
+
+}
+.cont1 {
+    
+    padding: 0 0 15px 0;
+    
+
+}
+#compra1 {
+    padding: 0;
+}
+
+/***************************Contacto**********************/
+#formulario {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+input {
+    padding: 0.50rem;
+}
+input, textarea {
+    display: block;
+    width: 100%;
+}
+
+#listacontacto {
+    list-style: none;
+    padding: 0;
+}
+
+
+.mg {
+	margin-bottom: 1em;
+}
+
+/***********************ERROR**********************************/
+.error-404 {
+    padding-top: 3rem;
+    text-align: center;
+    height: 80vh;
+}
+.panel {
+    padding-top: 3rem;
+    height: 80vh;
+}
+.admin-productos {
+    padding-top: 3rem;
+}
+
+/*********************Prod Descripcion*************************/
+.description {
+    padding-top: 1em;
+}
+.seccion-precio {
+    padding-top: 1.5em;
+}
+.container-prod {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+/*******************Seccion Productos**************************/
+.seccion-productos {
+    margin-top: 2em;
+}
+
+/*************************Tablas******************************/
+.table {
+    border-collapse: collapse;
+}
+
+.table td,
+.table th {
+    padding: .5rem;
+    border: 1px solid black;
+}
+
+.table td {
+    vertical-align: top;
+}
+

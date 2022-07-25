@@ -1,0 +1,12 @@
+Carrera: Diseño y Desarrollo Web
+Materia: programación II
+Cuatrimestre: 3er
+Año: 2021
+Turno: Noche 
+Comision: DWN3A
+Apellido y nombre: Scalzo Bryan
+Docente: Santiago Gallino
+Caracter de entrega: Primer parcial
+Nota: Este tp esta basado en el mismo que hice cuando curse la materia el cuatrimestre anterior.
+usuario admin: hola5@hola.com	
+password admin: 12345
