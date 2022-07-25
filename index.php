@@ -11,6 +11,7 @@ $seccion = $_GET['s'] ?? 'home';
 if(!isset($rutas[$seccion])) {
     $seccion = "404";
 }
+$login = isset($_SESSION['email']) ? true : false;
 ?>
 
 <!DOCTYPE html>
@@ -21,6 +22,8 @@ if(!isset($rutas[$seccion])) {
     <title>Lámparas Zelux <?= $rutas[$seccion]['title'];?></title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/jquery-3.5.1.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
     <header class="container fondo3">
@@ -50,6 +53,16 @@ if(!isset($rutas[$seccion])) {
                     <li class="nav-item">
                         <a class="nav-link" href="index.php?s=contacto">Contacto</a>
                     </li>
+                    <li class="nav-item">
+                        <?php if(!$login) : ?>
+                            <a id="login" class="nav-link" href="index.php?s=login">Login</a>
+                        <?php else : ?>
+                            <form action="acciones/auth-cerrar-sesion.php" method="post">
+                                <button class="nav-link" style="background-color: inherit; border: inherit" type="submit">Cerrar sesión</button>
+                            </form>
+                        <?php endif;?>
+
+                    </li>
                 </ul>
             </div>
         </nav>
@@ -73,7 +86,6 @@ if(!isset($rutas[$seccion])) {
 		<p>Bryan scalzo, Programacion II, DWTN2A, 2021</p>
     </footer>
     
-    <script src="js/jquery-3.5.1.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
+    
 </body>
 </html>

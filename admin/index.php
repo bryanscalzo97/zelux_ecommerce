@@ -22,9 +22,6 @@ if($requiereAutenticacion && !$autenticacion->estaAutenticado()) {
     exit;
 }
 
-
-$mensajeExito = $_SESSION['mensaje_exito'] ?? null;
-$mensajeError = $_SESSION['mensaje_error'] ?? null;
 unset($_SESSION['mensaje_exito'], $_SESSION['mensaje_error']);
 ?>
 <!DOCTYPE html>
@@ -82,21 +79,6 @@ unset($_SESSION['mensaje_exito'], $_SESSION['mensaje_error']);
 </header>
 
 <div class="container-fixed">
-    <?php
-    if($mensajeExito !== null):
-        ?>
-        <div class="msg-success"><?= $mensajeExito;?></div>
-    <?php
-    endif;
-    ?>
-    <?php
-    if($mensajeError !== null):
-        ?>
-        <div class="msg-error"><?= $mensajeError;?></div>
-    <?php
-    endif;
-    ?>
-
     <?php
     // Incluimos la sección que queremos mostrar
     require __DIR__ . '/secciones/' . $vista . '.php';

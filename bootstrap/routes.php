@@ -25,6 +25,9 @@ function getRutasSitio()
         'contacto' => [
             'title' => 'Contacto',
         ],
+        'login' => [
+            'title' => 'Login',
+        ],
 
         '404' => [
             'title' => 'Página no encontrada',

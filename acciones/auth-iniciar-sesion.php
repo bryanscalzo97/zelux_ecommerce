@@ -1,14 +1,16 @@
 <?php
-require_once __DIR__ . '/../../bootstrap/init.php';
+require_once __DIR__ . '/../bootstrap/init.php';
 
 $email      = $_POST['email'];
 $password   = $_POST['password'];
 
 $autenticacion = new Autenticacion();
 
+$_SESSION = [];
+
 if($autenticacion->iniciarSesion($email, $password)) {
     $_SESSION['mensaje_exito'] = "Sesión iniciada correctamente.";
-    
+    $_SESSION['email'] = $email;
     header("Location: ../index.php?s=home");
     exit;
 } else {
