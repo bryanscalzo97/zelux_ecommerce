@@ -28,6 +28,9 @@ function getRutasSitio()
         'login' => [
             'title' => 'Login',
         ],
+        'carrito' => [
+            'title' => 'Carrito',
+        ],
 
         '404' => [
             'title' => 'Página no encontrada',

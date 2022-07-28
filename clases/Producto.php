@@ -9,7 +9,7 @@ class Producto
     protected $titulo;
 
     /** @var string */
-    protected $intro;
+    protected $intro; 
 
     /** @var string */
     protected $texto;

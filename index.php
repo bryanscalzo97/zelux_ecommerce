@@ -53,16 +53,22 @@ $login = isset($_SESSION['email']) ? true : false;
                     <li class="nav-item">
                         <a class="nav-link" href="index.php?s=contacto">Contacto</a>
                     </li>
-                    <li class="nav-item">
-                        <?php if(!$login) : ?>
-                            <a id="login" class="nav-link" href="index.php?s=login">Login</a>
-                        <?php else : ?>
+                    <?php if(!$login) : ?>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.php?s=login">Login</a>
+                        </li>
+                    <?php else : ?>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.php?s=carrito">Carrito</a>
+                        </li>
+                        <li class="nav-item">
                             <form action="acciones/auth-cerrar-sesion.php" method="post">
                                 <button class="nav-link" style="background-color: inherit; border: inherit" type="submit">Cerrar sesión</button>
                             </form>
-                        <?php endif;?>
+                        </li>
+                    <?php endif;?>
 
-                    </li>
+                    
                 </ul>
             </div>
         </nav>

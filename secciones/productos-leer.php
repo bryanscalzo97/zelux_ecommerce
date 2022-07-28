@@ -17,9 +17,13 @@ $producto = $producto->traerPorPk($idProducto);
                 <div class="col-sm-12 col-md-6">
                     <del>$<?= htmlspecialchars($producto->getPrecioInicial());?></del><p>$<?= htmlspecialchars($producto->getPrecioDescuento());?></p>
                 </div>
-                <div class="col-sm-12 col-md-6">
-                    <a class="botoncomprar" href="#">Añadir al carrito</a>
-                </div>
+                <?php if($login) : ?>
+                    <!-- debo mandarle el id de usuario y el id de producto para que inserte el producto en el carrito -->
+                    <form action="acciones/addCarrito.php" method="post">
+                        <button class="nav-link" style="background-color: inherit; border: inherit" type="submit">Añadir al carrito</button>
+                    </form>
+                <?php endif;?>
+                
             </div>
         </div>
         <div class="row">
