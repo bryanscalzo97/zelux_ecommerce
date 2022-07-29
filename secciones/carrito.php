@@ -13,6 +13,7 @@ $total = 0;
                     <th>Precio x unidad</th>
                     <th>Cantidad</th>
                     <th>total</th>
+                    <th>Acciones</th>
                 </tr>
             </thead>
             <tbody>
@@ -27,6 +28,12 @@ $total = 0;
                     <td><?= htmlspecialchars($producto->getPrecioDescuento());?></td>
                     <td><?= $carrito->getCantidad();?></td>
                     <td><?= $carrito->getCantidad()*$producto->getPrecioDescuento();?></td>
+                    <td>
+                        <form action="acciones/deleteProducto.php" method="post">
+                            <button>Eliminar</button>
+                            <Input type="number" name="id_producto" value="<?= $producto->getProductoId() ?>" class="d-none"></Input>
+                        </form>
+                    </td>
                 </tr>
             <?php
             endforeach; ?>
@@ -35,11 +42,10 @@ $total = 0;
             </tr>
             </tbody>
         </table>
-
-        <?php if($total !== 0) : ?>    
-        <form action="acciones/comprar.php" method="post">
-            <button class="nav-link" style="background-color: inherit; border: inherit" type="submit">Comprar</button>
-        </form>
+        <?php if($total !== 0) : ?>
+            <form action="acciones/comprar.php" method="post">
+                <button class="nav-link btn btn-warning"  type="submit">Comprar</button>
+            </form>
         <?php endif;?>
     </div>
 </main>

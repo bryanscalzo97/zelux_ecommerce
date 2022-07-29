@@ -59,6 +59,9 @@ $login = isset($_SESSION['email']) ? true : false;
                         </li>
                     <?php else : ?>
                         <li class="nav-item">
+                            <a class="nav-link" href="index.php?s=perfil">Mi perfil</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="index.php?s=carrito">Carrito</a>
                         </li>
                         <li class="nav-item">

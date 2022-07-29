@@ -17,6 +17,22 @@ class Usuario
      */
     protected $password;
 
+     /**
+     * Obtiene todas los usuarios.
+     *
+     * @return Usuario[]
+     */
+    public function todosUsuarios(): array
+    {
+        $db = (new Conexion())->getConexion();
+        $query = "SELECT * FROM usuarios";
+        $stmt = $db->prepare($query);
+        $stmt->execute();
+        $stmt->setFetchMode(PDO::FETCH_CLASS, self::class);
+
+        return $stmt->fetchAll();
+    }
+
     /**
      * @param string $email
      * @return Usuario|null
@@ -28,6 +44,27 @@ class Usuario
                   WHERE email = ?";
         $stmt = $db->prepare($query);
         $stmt->execute([$email]);
+        $stmt->setFetchMode(PDO::FETCH_CLASS, self::class);
+        $usuario = $stmt->fetch();
+
+        if(!$usuario) {
+            return null;
+        }
+
+        return $usuario;
+    }
+
+    /**
+     * @param string $email
+     * @return Usuario|null
+     */
+    public function getUsuarioporId(int $id_usuario): ?Usuario
+    {
+        $db = (new Conexion())->getConexion();
+        $query = "SELECT * FROM usuarios
+                  WHERE usuario_id = ?";
+        $stmt = $db->prepare($query);
+        $stmt->execute([$id_usuario]);
         $stmt->setFetchMode(PDO::FETCH_CLASS, self::class);
         $usuario = $stmt->fetch();
 

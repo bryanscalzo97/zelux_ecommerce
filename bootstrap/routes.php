@@ -31,6 +31,9 @@ function getRutasSitio()
         'carrito' => [
             'title' => 'Carrito',
         ],
+        'perfil' => [
+            'title' => 'Perfil',
+        ],
 
         '404' => [
             'title' => 'Página no encontrada',
@@ -62,6 +65,14 @@ function getRutasAdmin(): array {
         ],
         'productos-editar' => [
             'title' => 'Publicar Producto',
+            'autenticacion' => true,
+        ], 
+        'usuarios' => [
+            'title' => 'Usuarios',
+            'autenticacion' => true,
+        ],
+        'ver-productos-usuario' => [
+            'title' => 'ver-productos-usuario',
             'autenticacion' => true,
         ],
     ];

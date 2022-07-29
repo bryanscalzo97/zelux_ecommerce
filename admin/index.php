@@ -64,6 +64,7 @@ unset($_SESSION['mensaje_exito'], $_SESSION['mensaje_error']);
                         ?>
                     <li class="nav-item"><a class="nav-link" href="index.php?s=home">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="index.php?s=productos">Productos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.php?s=usuarios">Usuarios</a></li>
                     <li>
                         <form action="acciones/auth-cerrar-sesion.php" method="post">
                             <button class="nav-link" style="background-color: inherit; border: inherit" type="submit">Cerrar sesión</button>

@@ -70,6 +70,30 @@ class Producto
         return $producto;
     }
 
+    /**
+     * Retorna el producto con el id $id.
+     * De no existir, retorna null.
+     *
+     * @param int $pk
+     * @return Producto|null
+     */
+    public function traerPorIdUsuario(int $id_usuario): ?Producto
+    {
+        $db = (new Conexion())->getConexion();
+        $query = "SELECT * FROM productos
+                  WHERE usuario_fk = ?";
+        $stmt = $db->prepare($query);
+        $stmt->execute([$id_usuario]);
+        $stmt->setFetchMode(PDO::FETCH_CLASS, self::class);
+        $producto = $stmt->fetch();
+
+        if(!$producto) {
+            return null;
+        }
+
+        return $producto;
+    }
+
 
     /**
      * Crea un registro en la base de datos.
