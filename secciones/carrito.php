@@ -30,7 +30,7 @@ $total = 0;
                     <td><?= $carrito->getCantidad()*$producto->getPrecioDescuento();?></td>
                     <td>
                         <form action="acciones/deleteProducto.php" method="post">
-                            <button>Eliminar</button>
+                            <button class="btn btn-danger">Eliminar</button>
                             <Input type="number" name="id_producto" value="<?= $producto->getProductoId() ?>" class="d-none"></Input>
                         </form>
                     </td>

@@ -34,6 +34,12 @@ function getRutasSitio()
         'perfil' => [
             'title' => 'Perfil',
         ],
+        'registro' => [
+            'title' => 'Registro',
+        ],
+        'historial' => [
+            'title' => 'Historial',
+        ],
 
         '404' => [
             'title' => 'Página no encontrada',

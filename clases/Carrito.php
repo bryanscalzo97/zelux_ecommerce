@@ -50,15 +50,36 @@ class Carrito
      * @param int $pk
      * @return Carrito[]
      */
-    public function deleteCarrito(int $pk): array
+    public function deleteCarrito(int $id_usuario): array
     {
         $db = (new Conexion())->getConexion();
         $query = "DELETE FROM carrito WHERE id_usuario = ?";
         $stmt = $db->prepare($query);
-        $stmt->execute([$pk]);
+        $stmt->execute([$id_usuario]);
         $stmt->setFetchMode(PDO::FETCH_CLASS, self::class);
 
         return $stmt->fetchAll();
+    }
+
+     /**
+     * Crea un registro en la base de datos.
+     * Lanza una PDOException en caso de ocurrir un error en la consulta.
+     *
+     * @param array $data
+     * @throws PDOException
+     */
+    public function deleteProducto(int $id_producto)
+    {
+
+        $db = (new Conexion())->getConexion();
+        $query = "DELETE FROM carrito WHERE id_usuario = (:id_usuario) AND id_producto = (:id_producto)";
+            $stmt = $db->prepare($query);
+            $stmt->execute([
+                'id_producto' => $id_producto,
+                'id_usuario' => $_SESSION['id'],
+            ]);
+            return $stmt->fetchAll();
+
     }
 
      /**
@@ -86,24 +107,6 @@ class Carrito
 
     }
 
-     /**
-     * Crea un registro en la base de datos.
-     * Lanza una PDOException en caso de ocurrir un error en la consulta.
-     *
-     * @param array $data
-     * @throws PDOException
-     */
-    public function deleteProducto(int $id_producto, int $id_usuario)
-    {
-
-        $db = (new Conexion())->getConexion();
-        $query = "DELETE FROM carrito WHERE id_usuario = (:id_usuario)";
-            $stmt = $db->prepare($query);
-            $stmt->execute([
-                'id_usuario' => $id_usuario,
-            ]);
-            return $stmt->fetchAll();
-
-    }
+    
     
 }

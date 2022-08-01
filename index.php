@@ -57,7 +57,13 @@ $login = isset($_SESSION['email']) ? true : false;
                         <li class="nav-item">
                             <a class="nav-link" href="index.php?s=login">Login</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.php?s=registro">Registro</a>
+                        </li>
                     <?php else : ?>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.php?s=historial">Mi historial</a>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link" href="index.php?s=perfil">Mi perfil</a>
                         </li>

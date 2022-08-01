@@ -16,13 +16,11 @@
             <tbody>
             <?php
             foreach($usuarios as $usuario):
-                // $producto = (new Producto())->traerPorPk($carrito->getProductoId());
-                // $total += $carrito->getCantidad()*$producto->getPrecioDescuento();
                 ?>
                 <tr>
                     <td><?= htmlspecialchars($usuario->getUsuarioId());?></td>
                     <td><?= htmlspecialchars($usuario->getEmail());?></td>
-                    <td><a class="botoncomprar" href="index.php?s=ver-productos-usuario&id=<?= htmlspecialchars($_SESSION['id']);?>">Ver más</a></td>
+                    <td><a class="botoncomprar" href="index.php?s=ver-productos-usuario&id=<?= htmlspecialchars($usuario->getUsuarioId());?>">Ver Compras</a></td>
                 </tr>
             <?php
             endforeach; ?>

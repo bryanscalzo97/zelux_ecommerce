@@ -6,7 +6,7 @@ $password   = $_POST['password'];
 
 $autenticacion = new Autenticacion();
 
-if($autenticacion->iniciarSesion($email, $password)) {
+if($autenticacion->iniciarSesionAdmin($email, $password)) {
     $_SESSION['mensaje_exito'] = "Sesión iniciada correctamente.";
     
     header("Location: ../index.php?s=home");

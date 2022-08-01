@@ -1,6 +1,6 @@
 <?php
 
-class Autenticacion
+class RegistroUsuario
 {
     /**
      * @var Usuario
@@ -30,34 +30,21 @@ class Autenticacion
         return true;
     }
 
-    /**
+        /**
      * @param string $email
      * @param string $password
-     * @return bool - Si la autenticación tuvo éxito o no.
      */
-    public function iniciarSesionAdmin(string $email, string $password): bool
+    public function crearUsuario(string $email, string $password)
     {
-
-        // Buscamos el usuario por su email.
-        $this->usuario = (new Usuario())->traerPorEmail($email);
-
-        if($this->usuario === null) {
-            return false;
-        }
-
-        // Verificamos el password.
-        if(!password_verify($password, $this->usuario->getPassword())) {
-            return false;
-        }
-
-        //Verificamos el tipo de usuario
-        if($this->usuario->getRol() == 2) {
-            return false;
-        } 
-
-        $this->autenticarUsuario($this->usuario);
-        return true;
-        
+        $db = (new Conexion())->getConexion();
+        $query = "INSERT INTO usuarios (email, password, rol_fk)
+          VALUES (:email, :password, :rol_fk)"   ;
+        $stmt = $db->prepare($query);
+        $stmt->execute([
+            'email' => $email,
+            'password' => password_hash($password, PASSWORD_DEFAULT),
+            'rol_fk' => 2,
+        ]);
     }
 
     /**

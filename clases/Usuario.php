@@ -103,6 +103,13 @@ class Usuario
     {
         return $this->email;
     }
+    /**
+     * @return string
+     */
+    public function getRol(): string
+    {
+        return $this->rol_fk;
+    }
 
     /**
      * @param string $email

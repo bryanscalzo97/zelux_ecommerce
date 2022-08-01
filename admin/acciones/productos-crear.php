@@ -57,7 +57,7 @@ if(!empty($imagen['tmp_name'])) {
 try {
     $producto = new Producto();
     $producto->crear([
-        'usuario_fk' => 11, // TODO: Usuario hardcodeado
+        'usuario_fk' => $_SESSION['id'],
         'categoria_fk' => $categoria,
         'titulo' => $titulo,
         'intro' => $intro,
